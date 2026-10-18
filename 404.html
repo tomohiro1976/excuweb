@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found</title>
+  <meta name="description" content="The page you requested could not be found. Return to the Roblox Executor library to browse executor profiles and guides.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://robloxexecutor.dev/404.html">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-code { margin: 0; color: var(--text-3); font-size: 14px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; }
+    .error-hero { min-height: calc(100vh - 74px); display: grid; place-items: center; padding: 30px 0 90px; text-align: center; }
+    .error-hero .hero { width: 100%; padding: 0; }
+    .error-hero .hero__title { margin-top: 14px; font-size: clamp(96px, 18vw, 220px); line-height: .82; letter-spacing: -.085em; }
+    .error-hero .hero__lede { max-width: 500px; margin-top: 28px; }
+    .error-hero .hero__actions { margin-top: 34px; }
+    .error-hero .reveal { opacity: 0; transform: translateY(18px); animation: error-rise 720ms var(--ease) both; }
+    .error-hero .reveal:nth-child(2) { animation-delay: 90ms; }
+    .error-hero .reveal:nth-child(3) { animation-delay: 170ms; }
+    .error-hero .reveal:nth-child(4) { animation-delay: 250ms; }
+    @keyframes error-rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .error-hero .reveal { opacity: 1; transform: none; animation: none; } }
+  </style>
+</head>
+<body>
+  <canvas class="topography" aria-hidden="true"></canvas>
+  <header class="nav is-scrolled" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="https://robloxexecutor.dev" aria-label="robloxexecutor.dev home">
+        <img src="logo/ex-white.png" alt="robloxexecutor.dev logo" width="28" height="28">
+        <span>robloxexecutor<span class="brand__tld">.dev</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html#library">Library</a>
+        <a href="index.html#features">Why us</a>
+        <a href="index.html#guide">Guide</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="btn btn--light btn--sm nav__cta" href="index.html#library">Browse executors</a>
+    </div>
+  </header>
+
+  <main class="error-hero">
+    <section class="hero" aria-labelledby="not-found-title">
+      <div class="wrap hero__inner">
+        <p class="error-code reveal">Error</p>
+        <h1 class="hero__title reveal" id="not-found-title">404</h1>
+        <p class="hero__lede reveal">The page you are looking for could not be found.</p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--light" href="https://robloxexecutor.dev">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3M7 4l-4 4 4 4" /></svg>
+            Back home
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/topography.js"></script>
+  <script>if (window.Topography) Topography.mount(document.querySelector('.topography'), { variant: 'home', hover: '.btn' });</script>
+</body>
+</html>
